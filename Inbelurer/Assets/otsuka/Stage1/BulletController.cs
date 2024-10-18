@@ -39,4 +39,13 @@ public class BulletController : MonoBehaviour
     {
         currentAmmo = Mathf.Min(currentAmmo + amount, maxAmmo);
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.CompareTag("Item"))
+        {
+            AddAmmo(5);
+            Destroy(other.gameObject);
+        }
+    }
 }
