@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 969609613853866130}
   - component: {fileID: 969609613853866141}
   - component: {fileID: 969609613853866140}
-  - component: {fileID: 969609613853866143}
   - component: {fileID: 1136069001141349321}
+  - component: {fileID: 7401880488940646553}
+  - component: {fileID: 7225042173685058949}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -108,19 +109,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &969609613853866143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 969609613853866142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fd9416c322b72c40b866c59b1b783b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
 --- !u!61 &1136069001141349321
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -147,3 +135,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.32}
   m_EdgeRadius: 0
+--- !u!114 &7401880488940646553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969609613853866142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f1f12a0fbabdbb4087594f9e585dc08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 199716811296405630, guid: ace716360862402459e8bfde39742092, type: 3}
+  firePoint: {fileID: 969609613853866130}
+  bulletSpeed: 10
+  maxAmmo: 10
+--- !u!114 &7225042173685058949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969609613853866142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04078196b00694340a3788343f523263, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 969609613853866142}
+  speed: 3

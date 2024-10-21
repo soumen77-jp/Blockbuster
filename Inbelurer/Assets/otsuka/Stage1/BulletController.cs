@@ -10,7 +10,7 @@ public class BulletController : MonoBehaviour
     public float bulletSpeed = 10f;
     public int maxAmmo = 10;
     private int currentAmmo;
-    
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +24,7 @@ public class BulletController : MonoBehaviour
         {
             Shoot();
         }
+        
     }
 
     void Shoot()
@@ -48,4 +49,6 @@ public class BulletController : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
+
+    
 }
