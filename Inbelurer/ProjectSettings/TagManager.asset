@@ -9,6 +9,7 @@ TagManager:
   - friend
   - FriendBullet
   - Enemy
+  - cosmos
   layers:
   - Default
   - TransparentFX
