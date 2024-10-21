@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Bullet
   - Item
+  - friend
+  - FriendBullet
+  - Enemy
   layers:
   - Default
   - TransparentFX
