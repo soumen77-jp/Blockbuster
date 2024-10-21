@@ -6,7 +6,12 @@ TagManager:
   tags:
   - Bullet
   - Item
+<<<<<<< HEAD
   - Dead
+=======
+  - friend
+  - FriendBullet
+>>>>>>> f3a616fe7547964094e84d4345af358dd73e347e
   - Enemy
   layers:
   - Default
