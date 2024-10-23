@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1136069001141349321}
   - component: {fileID: 7401880488940646553}
   - component: {fileID: 7225042173685058949}
+  - component: {fileID: 6478619142585452223}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -148,9 +149,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 199716811296405630, guid: ace716360862402459e8bfde39742092, type: 3}
-  firePoint: {fileID: 969609613853866130}
+  bulletDamage: 5
+  maxBullets: 10
   bulletSpeed: 10
-  maxAmmo: 10
 --- !u!114 &7225042173685058949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,3 +166,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 969609613853866142}
   speed: 3
+--- !u!114 &6478619142585452223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969609613853866142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e48e04020f2c462489cacbe8891fa0a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ammoPrefab: {fileID: 670936657080138328, guid: 3c0c836964240734a86509587ca1fd03, type: 3}
+  maxAmmoItems: 3
+  spawnInterval: 10

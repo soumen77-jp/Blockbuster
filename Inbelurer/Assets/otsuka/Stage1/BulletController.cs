@@ -6,49 +6,47 @@ using UnityEngine;
 public class BulletController : MonoBehaviour
 {
     public GameObject bulletPrefab;
-    public Transform firePoint;
-    public float bulletSpeed = 10f;
-    public int maxAmmo = 10;
-    private int currentAmmo;
-   
-    // Start is called before the first frame update
+    public int bulletDamage = 5;
+    public int maxBullets = 10;
+    private int currentBullets;
+    public float bulletSpeed = 5.0f;
     void Start()
     {
-        currentAmmo = maxAmmo;
+        currentBullets = maxBullets;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(1) && currentAmmo > 0)
+        if (Input.GetMouseButtonDown(1) && currentBullets > 0) // 右クリック
         {
             Shoot();
         }
-        
     }
 
     void Shoot()
     {
-       GameObject bullet = Instantiate(bulletPrefab, firePoint. position, firePoint.rotation);
-        currentAmmo--;
-        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        rb.velocity = firePoint.up * bulletSpeed;
-       
-    }
+        GameObject Bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+        currentBullets--;
+        // 上方向に発射
+        Vector3 direction = Vector3.up;
 
-    public void AddAmmo(int amount)
-    {
-        currentAmmo = Mathf.Min(currentAmmo + amount, maxAmmo);
-    }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.gameObject.CompareTag("Item"))
+        // 弾に速度を与える
+        Bullet.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
+        // 弾がゼロになったら回復アイテムを生成する
+        if (currentBullets == 0)
         {
-            AddAmmo(5);
-            Destroy(other.gameObject);
+            FindObjectOfType<Healitem>().StartSpawningAmmo();
         }
     }
 
-    
+    public void AddBullets(int amount)
+    {
+        currentBullets += amount;
+        if (currentBullets > maxBullets)
+        {
+            currentBullets = maxBullets;
+        }
+    }
 }
+
+
