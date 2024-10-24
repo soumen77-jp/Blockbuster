@@ -3,37 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-<<<<<<< HEAD
   tags: []
-=======
-  tags:
-<<<<<<< HEAD
-  - Planet
-  - Enemy
-  - Bonus
-  - Projectile
-  - Score
-  - Health
-  - CoinsText
-  - Coin
-  - PlayerRay
-  - Rocket
-=======
-  - Bullet
-  - Item
-<<<<<<< HEAD
-  - Dead
-=======
-  - friend
-  - FriendBullet
->>>>>>> f3a616fe7547964094e84d4345af358dd73e347e
-  - Enemy
-<<<<<<< HEAD
-  - cosmos
-=======
->>>>>>> 34587442c1c31fe7ca2eaefd070f69e1b650f95a
->>>>>>> 44b261cfc52302ed3572cecc2172caaf8b878e1f
->>>>>>> b3269e255e4c4404978a3c91f9700452f7e8ab9f
   layers:
   - Default
   - TransparentFX
@@ -70,25 +40,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Background
-    uniqueID: 1947543829
-    locked: 0
-  - name: Planets
-    uniqueID: 4094135763
-    locked: 0
-  - name: Projectile
-    uniqueID: 1111697911
-    locked: 0
-  - name: Enemy
-    uniqueID: 1152134415
-    locked: 0
-  - name: Bonus
-    uniqueID: 689362467
-    locked: 0
-  - name: Player
-    uniqueID: 2402381985
-    locked: 0
-  - name: VFX
-    uniqueID: 738997965
     locked: 0

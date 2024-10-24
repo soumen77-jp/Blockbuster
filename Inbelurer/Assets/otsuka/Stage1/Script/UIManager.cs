@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
+    int Bullet = 0; //弾の所持数
+    public GameObject BulletText;
     int hp = 0; //プレイヤーのHP
     public GameObject lifeImage; //HPの数を表示するImage
     public Sprite life3Image; //HP3画像
@@ -13,7 +15,16 @@ public class UIManager : MonoBehaviour
     public Sprite life0Image; //HP0画像
     // Start is called before the first frame update
     
-
+    //アイテム数更新
+    void UpdateItemCount()
+    {
+        //弾
+        if(Bullet != ItemKeeper.Bullet)
+        {
+            BulletText.GetComponent<Text>().text = ItemKeeper.Bullet.ToString();
+            Bullet = ItemKeeper.Bullet;
+        }
+    }
     void UpdateHP()
     {
        //Player取得
@@ -50,11 +61,13 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         UpdateHP(); //HP更新
+        UpdateItemCount(); //アイテム数更新
     }
 
     // Update is called once per frame
     void Update()
     {
+        UpdateItemCount(); //アイテム数更新
         UpdateHP(); //HP更新
     }
 }
