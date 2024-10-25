@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
-    int Bullet = 0; //’e‚ÌŠ”
+    int currentBullets = 0; //’e‚ÌŠ”
     public GameObject BulletText;
     int hp = 0; //ƒvƒŒƒCƒ„[‚ÌHP
     public GameObject lifeImage; //HP‚Ì”‚ğ•\¦‚·‚éImage
@@ -19,10 +19,10 @@ public class UIManager : MonoBehaviour
     void UpdateItemCount()
     {
         //’e
-        if(Bullet != ItemKeeper.Bullet)
+        if(currentBullets != ItemKeeper.currentBullets)
         {
-            BulletText.GetComponent<Text>().text = ItemKeeper.Bullet.ToString();
-            Bullet = ItemKeeper.Bullet;
+            BulletText.GetComponent<Text>().text = ItemKeeper.currentBullets.ToString();
+            currentBullets = ItemKeeper.currentBullets;
         }
     }
     void UpdateHP()

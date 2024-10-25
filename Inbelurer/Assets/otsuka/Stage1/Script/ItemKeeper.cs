@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ItemKeeper : MonoBehaviour
 {
-    public static int Bullet = 0; //’e‚Ì”
+    public static int currentBullets = 0; //’e‚Ì”
 
     // Start is called before the first frame update
     void Start()
