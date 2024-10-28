@@ -2,31 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBullet : MonoBehaviour
+public class BossEnemyBullet : MonoBehaviour
 {
-    private int bulletSpeed = 8;
+    // 設定された方向に弾を移動させる
+    float dx;
+    float dy;
+    public void Setting(float angle, float speed)
+    {
+        // 敵の右側が0°
+        // 反時計回りに角度は増える
 
-    // Update is called once per frame
+        // 2PIが360°
+        // PIが180°
+        // PI/2が90°
+
+        dx = Mathf.Cos(angle) * speed;
+        dy = Mathf.Sin(angle) * speed;
+    }
+
     void Update()
     {
-        Move();
-        OffScreen();
-    }
+        transform.position += new Vector3(dx, dy, 0) * Time.deltaTime;
 
-    //Enemyを下移動させる
-    private void Move()
-    {
-        transform.position +=
-            new Vector3(0, -bulletSpeed, 0) * Time.deltaTime;
-    }
-
-    //Bulletが画面外に出たら消滅させる
-    private void OffScreen()
-    {
-
-        if (this.transform.position.y < -5.5f)
+        if (transform.position.x < -3 || transform.position.x > 3 ||
+            transform.position.y < -3 || transform.position.y > 3)
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
 }
