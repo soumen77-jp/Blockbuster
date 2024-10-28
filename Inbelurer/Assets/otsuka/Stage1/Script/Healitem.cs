@@ -29,7 +29,10 @@ public class Healitem : MonoBehaviour
 
     Vector3 GetRandomPosition()
     {
-        return new Vector3(Random.Range(-10, 10), Random.Range(-10, 10), 0);
+        // カメラの上の位置にランダムに生成
+        float x = Random.Range(-20, 20);
+        float y = Camera.main.orthographicSize + Camera.main.transform.position.y; // カメラの上端
+        return new Vector3(x, y, 0);
     }
 
     public void OnAmmoCollected()
