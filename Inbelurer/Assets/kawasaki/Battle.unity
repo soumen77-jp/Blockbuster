@@ -977,13 +977,19 @@ PrefabInstance:
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 218322efd9e2bb38f6d144abb6ebd98bf05b02df
     - target: {fileID: 969609613853866141, guid: 3079fffc1636ea34586357c16787778b,
         type: 3}
       propertyPath: m_SortingOrder
       value: 2
       objectReference: {fileID: 0}
 >>>>>>> 4cae32d2a006f76a547caa274cb7bac040e2a306
+<<<<<<< HEAD
+>>>>>>> 218322efd9e2bb38f6d144abb6ebd98bf05b02df
+=======
 >>>>>>> 218322efd9e2bb38f6d144abb6ebd98bf05b02df
     - target: {fileID: 969609613853866142, guid: 3079fffc1636ea34586357c16787778b,
         type: 3}
