@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 909189322}
   - component: {fileID: 4632028130399680989}
   - component: {fileID: 909189324}
+  - component: {fileID: 909189325}
+  - component: {fileID: 610925461}
   m_Layer: 0
   m_Name: friendly
   m_TagString: friend
@@ -75,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: fd5c67cf0dc1fd5499578a574713c216, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -146,5 +148,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d39d2b2e31da9dc479a423e9eaefc408, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FriendBulletPrefab: {fileID: 2319151850629449206, guid: 507ef5c33a06146419ff5a0f7334e83d, type: 3}
+  FriendBulletPrefab: {fileID: 2319151850629449206, guid: 507ef5c33a06146419ff5a0f7334e83d,
+    type: 3}
   BulletSpeed: 720
+--- !u!114 &909189325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6671906189286454422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42a586313b4324446a7e46b03a1e3c33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &610925461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6671906189286454422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e261f963289cd3243ae55443f70ee030, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
