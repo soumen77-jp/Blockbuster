@@ -54,7 +54,7 @@ public class BulletController : MonoBehaviour
 
     void UpdateAmmoText()
     {
-        ammoText.text = "c‚è’e”: " + currentBullets;
+        ammoText.text = "c‚è’e” " + currentBullets;
     }
 }
 

@@ -30,7 +30,7 @@ public class Healitem : MonoBehaviour
     Vector3 GetRandomPosition()
     {
         // カメラの上の位置にランダムに生成
-        float x = Random.Range(-20, 20);
+        float x = Random.Range(-7,5 );
         float y = Camera.main.orthographicSize + Camera.main.transform.position.y; // カメラの上端
         return new Vector3(x, y, 0);
     }
