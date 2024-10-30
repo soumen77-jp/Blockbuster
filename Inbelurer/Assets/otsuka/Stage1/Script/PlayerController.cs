@@ -14,6 +14,9 @@ public class PlayerController : MonoBehaviour
     public static int hp = 3; //プレイヤーのHP
     public static string gameState; //ゲームの状態
     bool inDamage = false; //ダメージ中フラグ
+    //ノックバック
+    public float knockbackForce = 10f;
+    public Vector2 knockbackDirection;
 
     // Start is called before the first frame update
     void Start()
@@ -55,6 +58,7 @@ public class PlayerController : MonoBehaviour
     //ダメージ
     void GetDamage(GameObject enemy)
     {
+
         if(gameState == "playing")
         {
             hp--; //を減らす
