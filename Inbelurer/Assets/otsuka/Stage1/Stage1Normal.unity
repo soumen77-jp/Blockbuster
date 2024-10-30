@@ -765,7 +765,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 63fc878510f9aee4bb4d048c8eac4fc6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1194,5 +1194,6 @@ PrefabInstance:
       propertyPath: m_FontData.m_FontSize
       value: 70
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7731620457908331500, guid: 3c50cb5d1d6904e459fc7e97a65b0aed, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3c50cb5d1d6904e459fc7e97a65b0aed, type: 3}
