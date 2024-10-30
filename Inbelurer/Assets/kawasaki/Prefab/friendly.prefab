@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7650235966395454019}
   - component: {fileID: 909189322}
   - component: {fileID: 4632028130399680989}
-  - component: {fileID: 909189324}
   - component: {fileID: 909189325}
   - component: {fileID: 610925461}
   m_Layer: 0
@@ -136,21 +135,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32385117, y: 0.27880126}
   m_EdgeRadius: 0
---- !u!114 &909189324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6671906189286454422}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d39d2b2e31da9dc479a423e9eaefc408, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FriendBulletPrefab: {fileID: 2319151850629449206, guid: 507ef5c33a06146419ff5a0f7334e83d,
-    type: 3}
-  BulletSpeed: 720
 --- !u!114 &909189325
 MonoBehaviour:
   m_ObjectHideFlags: 0

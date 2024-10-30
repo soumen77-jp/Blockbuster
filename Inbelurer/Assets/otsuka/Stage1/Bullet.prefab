@@ -11,7 +11,11 @@ GameObject:
   - component: {fileID: 199716811296405571}
   - component: {fileID: 199716811296405568}
   - component: {fileID: 199716811296405569}
+<<<<<<< HEAD
+  - component: {fileID: -3149898705080783653}
+=======
   - component: {fileID: 7254485108194092833}
+>>>>>>> 1b3893df40d86b8a2a9be6e65d3c0263bd9d2f52
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Bullet
@@ -107,7 +111,11 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+<<<<<<< HEAD
+--- !u!61 &-3149898705080783653
+=======
 --- !u!61 &7254485108194092833
+>>>>>>> 1b3893df40d86b8a2a9be6e65d3c0263bd9d2f52
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

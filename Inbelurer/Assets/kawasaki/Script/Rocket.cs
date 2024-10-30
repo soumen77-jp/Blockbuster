@@ -25,8 +25,21 @@ public class Rocket : MonoBehaviour
         }
 
         //爆発範囲内のコライダーを取得
-        //foreach(Collider nearbyObject in colliders)
+        Collider[] colliders = Physics.OverlapSphere(transform.position, ExplosionRange);
 
+        foreach(Collider nearbyObject in colliders)
+        {
+            Rigidbody rb = nearbyObject.GetComponent<Rigidbody>();
+            if(rb!=null)
+            {
+                rb.AddExplosionForce(ExplosionDamage, transform.position, ExplosionRange);
+            }
+
+
+
+        }
+
+        Destroy(gameObject);
 
     }
 

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 969609613853866140}
   - component: {fileID: 3202236602459417871}
   - component: {fileID: 2041071648}
-  - component: {fileID: 2041071649}
+  - component: {fileID: 2013117301}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -147,9 +147,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f32674d75424b946ae96eb5a314dc2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 969609613853866142}
   speed: 3
---- !u!114 &2041071649
+--- !u!114 &2013117301
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
