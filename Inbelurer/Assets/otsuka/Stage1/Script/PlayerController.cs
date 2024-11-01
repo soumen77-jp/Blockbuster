@@ -14,15 +14,13 @@ public class PlayerController : MonoBehaviour
     public static int hp = 3; //プレイヤーのHP
     public static string gameState; //ゲームの状態
     bool inDamage = false; //ダメージ中フラグ
-    //ノックバック
-    public float knockbackForce = 10f;
-    public Vector2 knockbackDirection;
+   
 
     // Start is called before the first frame update
     void Start()
     {
         rbody = GetComponent<Rigidbody2D>();//Rigidbody2を得る
-        //ゲームの状態をプレイ中にする
+       //ゲームの状態をプレイ中にする
         gameState = "playing";
 
     }
@@ -30,6 +28,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         axisH = Input.GetAxisRaw("Horizontal"); //左右キー入力
         axisV = Input.GetAxisRaw("Vertical"); //上下キー入力
 
@@ -41,6 +40,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+       
         //移動速度を更新する
         rbody.velocity = new Vector2(axisH, axisV).normalized * speed;
     }
@@ -53,6 +53,10 @@ public class PlayerController : MonoBehaviour
             GetDamage(collision.gameObject);
         }
 
+        if (collision.gameObject.tag == "EnemyBullet")
+        {
+            GetDamage1(collision.gameObject);
+        }
     }
 
     //ダメージ
@@ -71,12 +75,26 @@ public class PlayerController : MonoBehaviour
         }
         
     }
-    //ダメージ終了
-    //void DamageEnd()
-    //{
-    //    inDamage = false; //ダメージフラグOFF
-    //    gameObject.GetComponent<SpriteRenderer>().enabled = true; //スプライトを元に戻す
-    //}
+    void GetDamage1(GameObject enemy)
+    {
+
+        if (gameState == "playing")
+        {
+            hp--; //を減らす
+            if (hp > 0)
+            {
+                //ダメージフラグON
+                inDamage = true;
+                Invoke("DamageEnd", 0.25f);
+            }
+        }
+
+    }
+
+    public void Clear()
+    {
+
+    }
     //ゲームオーバー
     void GameOver()
     {
@@ -85,4 +103,6 @@ public class PlayerController : MonoBehaviour
         GetComponent<BoxCollider2D>().enabled = false; //プレイヤーあたりを消す
         Destroy(player, 0.1f); //1秒後にプレイヤーを消す
     }
+
+   
 }
