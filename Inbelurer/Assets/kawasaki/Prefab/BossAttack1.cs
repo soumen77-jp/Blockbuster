@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BossAttack1 : MonoBehaviour
 {
-    void OnTriggerEnter2D(Collider2D other)
+    void OnCollisionEnter2D(Collision2D other)
     {
 
         if (other.gameObject.tag == "Player")
@@ -12,9 +12,6 @@ public class BossAttack1 : MonoBehaviour
             Destroy(gameObject);
 
         }
-
-
-
 
     }
 
