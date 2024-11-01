@@ -20,8 +20,8 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rbody = GetComponent<Rigidbody2D>();//Rigidbody2を得る
-        //ゲームの状態をプレイ中にする
-       
+       //ゲームの状態をプレイ中にする
+        gameState = "playing";
 
     }
 
@@ -53,6 +53,10 @@ public class PlayerController : MonoBehaviour
             GetDamage(collision.gameObject);
         }
 
+        if (collision.gameObject.tag == "EnemyBullet")
+        {
+            GetDamage1(collision.gameObject);
+        }
     }
 
     //ダメージ
@@ -71,7 +75,22 @@ public class PlayerController : MonoBehaviour
         }
         
     }
-    
+    void GetDamage1(GameObject enemy)
+    {
+
+        if (gameState == "playing")
+        {
+            hp--; //を減らす
+            if (hp > 0)
+            {
+                //ダメージフラグON
+                inDamage = true;
+                Invoke("DamageEnd", 0.25f);
+            }
+        }
+
+    }
+
     public void Clear()
     {
 
