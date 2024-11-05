@@ -3,15 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-<<<<<<< HEAD
   tags:
   - BossEnemy
-  - Bonus
   - Enemy
-  - Projectile
-=======
-  tags: []
->>>>>>> 4cae32d2a006f76a547caa274cb7bac040e2a306
   layers:
   - Default
   - TransparentFX
