@@ -6,23 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/otsuka/Title/Title.unity
-    guid: c3e2d25c1fedb424c860c72a4b0fe909
-  - enabled: 1
-    path: Assets/otsuka/StageSelect/StageSelect.unity
-    guid: fdd97c8efa5226140afd361bd83e5bb7
-  - enabled: 1
-    path: Assets/otsuka/Shop/Strengthen your ship/Strengthen your ship.unity
-    guid: ed96af9c5b5bb514fad6cd9ba1d5f29c
-  - enabled: 1
-    path: Assets/otsuka/Shop/Ally Enhancement/Ally Enhancement.unity
-    guid: c65c44be2dcae7449b32952b54b7fb6c
-  - enabled: 1
-<<<<<<< HEAD
-    path: Assets/kawasaki/MainScene.unity
-    guid: 86ec82efbe3794d4d981b53298f85284
-=======
-    path: Assets/nisida/nisida.unity
-    guid: 0c3983303eb26414a982903819d93cda
->>>>>>> d42dc0f0413575ec9eee2b94c4c3ccae33f55d5a
+    path: Assets/main/Battle.unity
+    guid: 2e02324bca16e5e4ca6aaa5802b8288f
   m_configObjects: {}
