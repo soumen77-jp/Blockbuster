@@ -148,9 +148,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1f12a0fbabdbb4087594f9e585dc08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 199716811296405630, guid: ace716360862402459e8bfde39742092,
+  bulletPrefab: {fileID: 3637817791351785500, guid: ace716360862402459e8bfde39742092,
     type: 3}
-  firePoint: {fileID: 0}
+  firePoint: {fileID: 969609613853866130}
   ammoText: {fileID: 0}
   bulletSpeed: 10
   bulletDamage: 5
@@ -181,6 +181,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e48e04020f2c462489cacbe8891fa0a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammoPrefab: {fileID: 670936657080138328, guid: 3c0c836964240734a86509587ca1fd03,
+  ammoPrefab: {fileID: 6049152838009460551, guid: 3c0c836964240734a86509587ca1fd03,
     type: 3}
   spawnInterval: 10
