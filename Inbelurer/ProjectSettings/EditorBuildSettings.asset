@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/otsuka/Shop/Ally Enhancement/Ally Enhancement.unity
     guid: c65c44be2dcae7449b32952b54b7fb6c
+  - enabled: 1
+    path: Assets/nisida/nisida.unity
+    guid: 0c3983303eb26414a982903819d93cda
   m_configObjects: {}
