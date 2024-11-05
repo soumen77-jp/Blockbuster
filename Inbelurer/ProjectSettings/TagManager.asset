@@ -3,18 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-<<<<<<< HEAD
-  - BossEnemy
-  - Enemy
-=======
-  - PlayerBullet
-  - friend
-  - FriendBullet
-  - Enemy
-  - Item
-  - EnemyBullet
->>>>>>> 39877a85ec01c408c73d1f40c0a634ab127db7fa
+  tags: []
   layers:
   - Default
   - TransparentFX
