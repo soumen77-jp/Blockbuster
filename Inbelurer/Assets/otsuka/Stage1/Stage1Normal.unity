@@ -214,6 +214,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1395935919392383171, guid: 3c50cb5d1d6904e459fc7e97a65b0aed,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 40369611}
     - target: {fileID: 1395935919392383172, guid: 3c50cb5d1d6904e459fc7e97a65b0aed,
         type: 3}
       propertyPath: m_Pivot.x
@@ -638,7 +643,7 @@ SpriteRenderer:
   m_Size: {x: 12.8, y: 7.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &794013619
