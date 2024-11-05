@@ -1,19 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class BulletController : MonoBehaviour
 {
-
     public GameObject bulletPrefab;
     public Transform firePoint;
     public Text ammoText;
+    public float bulletSpeed = 10f; // ’e‚Ì‘¬“x
     public int bulletDamage = 5;
     public int maxBullets = 10;
     private int currentBullets;
-    public float bulletSpeed = 1.0f;
 
     void Start()
     {
@@ -31,10 +27,9 @@ public class BulletController : MonoBehaviour
 
     void Shoot()
     {
-        GameObject Bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        Rigidbody2D rb = Bullet.GetComponent<Rigidbody2D>();
-        rb.velocity = Vector2.up * bulletSpeed; // ’e‚ğã•ûŒü‚É”­Ë
-
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        rb.velocity = Vector2.up * bulletSpeed; // ã•ûŒü‚É”­Ë
         currentBullets--;
         UpdateAmmoText();
         // ’e‚ªƒ[ƒ‚É‚È‚Á‚½‚ç‰ñ•œƒAƒCƒeƒ€‚ğ¶¬‚·‚é
@@ -56,8 +51,9 @@ public class BulletController : MonoBehaviour
 
     void UpdateAmmoText()
     {
-        ammoText.text = "c‚è’e”: " + currentBullets;
+        ammoText.text = "c‚è’e” " + currentBullets;
     }
 }
+
 
 

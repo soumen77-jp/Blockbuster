@@ -148,10 +148,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1f12a0fbabdbb4087594f9e585dc08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 199716811296405630, guid: ace716360862402459e8bfde39742092, type: 3}
+  bulletPrefab: {fileID: 199716811296405630, guid: ace716360862402459e8bfde39742092,
+    type: 3}
+  firePoint: {fileID: 0}
+  ammoText: {fileID: 0}
+  bulletSpeed: 10
   bulletDamage: 5
   maxBullets: 10
-  bulletSpeed: 10
 --- !u!114 &7225042173685058949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 969609613853866142}
-  speed: 3
+  speed: 10
 --- !u!114 &6478619142585452223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,6 +181,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e48e04020f2c462489cacbe8891fa0a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammoPrefab: {fileID: 670936657080138328, guid: 3c0c836964240734a86509587ca1fd03, type: 3}
-  maxAmmoItems: 3
+  ammoPrefab: {fileID: 670936657080138328, guid: 3c0c836964240734a86509587ca1fd03,
+    type: 3}
   spawnInterval: 10

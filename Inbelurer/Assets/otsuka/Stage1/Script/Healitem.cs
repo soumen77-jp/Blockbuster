@@ -5,8 +5,6 @@ using UnityEngine;
 public class Healitem : MonoBehaviour
 {
     public GameObject ammoPrefab;
-    public int maxAmmoItems = 3;
-    private int currentAmmoItems = 0;
     public float spawnInterval = 10f;
     private bool isSpawning = false;
 
@@ -26,24 +24,33 @@ public class Healitem : MonoBehaviour
 
     void TrySpawnAmmo()
     {
-        if (currentAmmoItems < maxAmmoItems)
-        {
-            Instantiate(ammoPrefab, GetRandomPosition(), Quaternion.identity);
-            currentAmmoItems++;
-        }
+        Instantiate(ammoPrefab, GetRandomPosition(), Quaternion.identity);
     }
 
     Vector3 GetRandomPosition()
     {
-        return new Vector3(Random.Range(-10, 10), Random.Range(-10, 10), 0);
+        // カメラの上の位置にランダムに生成
+        float x = Random.Range(-3,3 );
+        float y = Camera.main.orthographicSize + Camera.main.transform.position.y; // カメラの上端
+        return new Vector3(x, y, 0);
     }
 
     public void OnAmmoCollected()
     {
-        currentAmmoItems--;
         // プレイヤーが回復アイテムを取ったら生成を中断
         CancelInvoke("TrySpawnAmmo");
         isSpawning = false;
+
+        // 画面外の回復アイテムを消滅させる
+        Battery[] ammoItems = FindObjectsOfType<Battery>();
+        foreach (Battery item in ammoItems)
+        {
+            if (!item.GetComponent<Renderer>().isVisible)
+            {
+                Destroy(item.gameObject);
+            }
+        }
     }
 }
+
 
