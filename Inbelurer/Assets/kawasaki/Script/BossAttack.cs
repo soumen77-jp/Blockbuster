@@ -7,8 +7,13 @@ public class BossAttack : MonoBehaviour
     public float attackInterval = 3f; // UŒ‚‚ÌŠÔŠu
     private float nextAttackTime;
     public GameObject Attack1;
+    public GameObject Attack2;
+    public GameObject Attack3;
     public Transform firePoint;
     public Transform player;
+    public int Attack2bulletCount = 5;        // U’e‚Ì”
+    public float Attack2spreadAngle = 45f;    // U’e‚ÌL‚ª‚éŠp“x
+    public float Attack2bulletSpeed = 10f;    // ’e‚ÌƒXƒs[ƒh
 
     void Start()
     {
@@ -38,22 +43,26 @@ public class BossAttack : MonoBehaviour
                 AttackType2();
                 break;
             case 3:
-                AttackType3();
+                AttackType2();
                 break;
+
+
         }
     }
 
+    //ãUŒ‚
     void AttackType1()
     {
         // UŒ‚1‚Ìˆ—
-        Debug.Log("Enemy Attack Type 1!");
+        Debug.Log("Enemy Attack  1");
 
         // ’e‚ğ”­Ë‚·‚éˆ—
-        ShootBullet(1.0f, 5f);
+        ShootBullet( 10f);
 
     }
 
-    void ShootBullet(float damage,float speed)
+
+    void ShootBullet( float speed)
     {
         GameObject bullet = Instantiate(Attack1, firePoint.position, firePoint.rotation);
 
@@ -64,25 +73,32 @@ public class BossAttack : MonoBehaviour
 
     }
 
-
+    //’†UŒ‚
     void AttackType2()
     {
-        // UŒ‚2‚Ìˆ—
-        Debug.Log("Enemy Attack Type 2!");
-       
+        Debug.Log("Enemy  Attack  2");
+
+        ShootBullets();
     }
 
+    private void ShootBullets()
+    {
+        for (int i = 0; i < Attack2bulletCount; i++)
+        {
+            float angle = i * (360f / Attack2bulletCount) + Time.time * 30f; // ŠÔ‚É‰‚¶‚ÄŠp“x‚ğ‘‰Á
+            Vector2 direction = Quaternion.Euler(0, 0, angle) * Vector2.up;
 
-
+            GameObject bullet = Instantiate(Attack2, transform.position, Quaternion.identity);
+            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            rb.velocity = direction * Attack2bulletSpeed;
+        }
+    }
 
     void AttackType3()
     {
-        // UŒ‚3‚Ìˆ—
-        Debug.Log("Enemy  Attack Type 3!");
-        
+        Debug.Log("Enemy  Attack  3");
+
+       
     }
-
-
-
 
 }
