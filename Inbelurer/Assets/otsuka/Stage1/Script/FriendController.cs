@@ -24,6 +24,12 @@ public class FriendController : MonoBehaviour
             gameObject.SetActive(false);
         }
 
+        if (other.gameObject.CompareTag("EnemyBullet")) //íeÇ…ìñÇΩÇÈÇ∆è¡ñ≈
+        {
+            Destroy(gameObject);
+        }
+
+
     }
 
 }

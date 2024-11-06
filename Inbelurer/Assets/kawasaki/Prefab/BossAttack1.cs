@@ -13,6 +13,13 @@ public class BossAttack1 : MonoBehaviour
 
         }
 
+        if (other.gameObject.tag == "friend")
+        {
+            Destroy(gameObject);
+
+        }
+
+
     }
 
 

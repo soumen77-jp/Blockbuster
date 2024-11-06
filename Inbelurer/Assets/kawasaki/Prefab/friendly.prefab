@@ -177,4 +177,4 @@ MonoBehaviour:
     type: 3}
   firePoint: {fileID: 726806896608057899}
   fireRate: 0.5
-  damage: 10
+  damage: 1
