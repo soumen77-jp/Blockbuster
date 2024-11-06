@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6049152838009460555}
   - component: {fileID: 6049152838009460554}
   - component: {fileID: 6049152838009460553}
-  - component: {fileID: 6049152838009460552}
+  - component: {fileID: -3971894472453388586}
   m_Layer: 0
   m_Name: battery
   m_TagString: Item
@@ -134,7 +134,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &6049152838009460552
+--- !u!114 &-3971894472453388586
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

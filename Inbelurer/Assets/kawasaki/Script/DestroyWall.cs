@@ -4,10 +4,26 @@ using UnityEngine;
 
 public class DestroyWall : MonoBehaviour
 {
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        // 当たったオブジェクト全てを消す
-        Destroy(other.gameObject);
+        if (collision.gameObject.tag == "EnemyBullet")
+        {
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.tag == "PlayerBullet")
+        {
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.tag == "FriendBullet")
+        {
+            Destroy(collision.gameObject);
+        }
+
+
     }
 
 }
+
+
