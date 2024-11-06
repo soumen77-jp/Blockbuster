@@ -329,6 +329,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 9015234592827529983, guid: 3c50cb5d1d6904e459fc7e97a65b0aed,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 60
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c50cb5d1d6904e459fc7e97a65b0aed, type: 3}
 --- !u!1 &306516692 stripped
@@ -429,7 +434,7 @@ PrefabInstance:
     - target: {fileID: 7419631445275701493, guid: f8ab406d73f517b4ca9b38fe56cdc2ad,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7419631445275701494, guid: f8ab406d73f517b4ca9b38fe56cdc2ad,
         type: 3}
@@ -597,7 +602,7 @@ PrefabInstance:
     - target: {fileID: 1136069001141349321, guid: 48c5c249cfd54f943ace03a8f5cb2add,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6478619142585452223, guid: 48c5c249cfd54f943ace03a8f5cb2add,
         type: 3}

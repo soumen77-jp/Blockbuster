@@ -49,9 +49,9 @@ public class PlayerController : MonoBehaviour
     }
 
     //ê⁄êG
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy")
         {
             GetDamage(collision.gameObject);
         }
