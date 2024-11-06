@@ -519,6 +519,10 @@ PrefabInstance:
       propertyPath: Attack2bulletCount
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 950666901, guid: f8ab406d73f517b4ca9b38fe56cdc2ad, type: 3}
+      propertyPath: Attack2bulletSpeed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1941169141, guid: f8ab406d73f517b4ca9b38fe56cdc2ad, type: 3}
       propertyPath: health
       value: 100
