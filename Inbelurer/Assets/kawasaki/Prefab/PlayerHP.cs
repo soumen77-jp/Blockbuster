@@ -29,18 +29,17 @@ public class PlayerHP : MonoBehaviour
 
 
     //ê⁄êG
-    void OnCollisionEnter2D(Collision2D other)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy")
         {
-            GetDamage(other.gameObject);
+            GetDamage(collision.gameObject);
         }
 
-        if (other.gameObject.tag == "EnemyBullet")
+        if (collision.gameObject.tag == "EnemyBullet")
         {
-            GetDamage(other.gameObject);
+            GetDamage(collision.gameObject);
         }
-
     }
 
     //É_ÉÅÅ[ÉW
