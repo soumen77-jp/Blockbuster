@@ -162,7 +162,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackInterval: 3
   Attack1: {fileID: 7383173443345689400, guid: 6f4cfd5fb7cc38f4bb782f410a717ce2, type: 3}
-  Attack2: {fileID: 3466828670542359598, guid: 6fd41a8ff8085d3429cb57a8c9ed7f4f, type: 3}
+  Attack2: {fileID: 7383173443345689400, guid: 6f4cfd5fb7cc38f4bb782f410a717ce2, type: 3}
+  Attack3: {fileID: 0}
   firePoint: {fileID: 7419631445275701451}
   player: {fileID: 0}
   Attack2bulletCount: 5
