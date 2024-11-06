@@ -8,9 +8,10 @@ public class BossAttack : MonoBehaviour
     private float nextAttackTime;
     public GameObject Attack1;
     public GameObject Attack2;
-    public GameObject Attack3;
     public Transform firePoint;
     public Transform player;
+    public float Attack1Speed = 5f;
+    public float Attack1Angle = 15f;
     public int Attack2bulletCount = 5;        // U’e‚Ì”
     public float Attack2spreadAngle = 45f;    // U’e‚ÌL‚ª‚éŠp“x
     public float Attack2bulletSpeed = 10f;    // ’e‚ÌƒXƒs[ƒh
@@ -50,30 +51,47 @@ public class BossAttack : MonoBehaviour
         }
     }
 
-    //ãUŒ‚
+
+    //---------------------------------------------
+    //---------------ãUŒ‚------------------------
+    //---------------------------------------------
+
+
     void AttackType1()
     {
         // UŒ‚1‚Ìˆ—
         Debug.Log("Enemy Attack  1");
 
-        // ’e‚ğ”­Ë‚·‚éˆ—
-        ShootBullet( 10f);
+        Shoot();
 
     }
-
-
-    void ShootBullet( float speed)
+    public void Shoot()
     {
-        GameObject bullet = Instantiate(Attack1, firePoint.position, firePoint.rotation);
-
-        Rigidbody2D rb = Attack1.GetComponent<Rigidbody2D>();
-
-        Vector3 direction = (player.position - firePoint.position).normalized; // ƒvƒŒƒCƒ„[‚Ì•ûŒü‚ğŒvZ
-        rb.velocity = direction * speed; // w’è‚³‚ê‚½‘¬“x‚Å”­Ë
-
+        // ’†‰›A¶A‰E‚Ì’e‚ğ¶¬
+        FireProjectile(Vector2.down); // ^‰º
+        FireProjectile(Quaternion.Euler(0, 0, -Attack1Angle) * Vector2.down); // ¶•ûŒü
+        FireProjectile(Quaternion.Euler(0, 0, Attack1Angle) * Vector2.down);  // ‰E•ûŒü
     }
 
-    //’†UŒ‚
+    private void FireProjectile(Vector2 direction)
+    {
+        // ’e‚ğ¶¬
+        GameObject projectile = Instantiate(Attack1, transform.position, Quaternion.identity);
+        Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
+
+        // ’e‚É‘¬“x‚ğ—^‚¦‚é
+        if (rb != null)
+        {
+            rb.velocity = direction.normalized * Attack1Speed;
+        }
+    }
+
+
+    //---------------------------------------------
+    //---------------’†UŒ‚------------------------
+    //---------------------------------------------
+
+
     void AttackType2()
     {
         Debug.Log("Enemy  Attack  2");
@@ -93,6 +111,10 @@ public class BossAttack : MonoBehaviour
             rb.velocity = direction * Attack2bulletSpeed;
         }
     }
+
+
+
+
 
     void AttackType3()
     {
