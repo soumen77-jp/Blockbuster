@@ -11,6 +11,7 @@ public class BossAttack : MonoBehaviour
     public GameObject Attack3;
     public Transform firePoint;
     public Transform player;
+    public float Attack1bulletSpeed = 10f; // 弾の速度
     public int Attack2bulletCount = 5;        // 散弾の数
     public float Attack2spreadAngle = 45f;    // 散弾の広がる角度
     public float Attack2bulletSpeed = 10f;    // 弾のスピード
@@ -56,22 +57,33 @@ public class BossAttack : MonoBehaviour
         // 攻撃1の処理
         Debug.Log("Enemy Attack  1");
 
-        // 弾を発射する処理
-        ShootBullet( 10f);
-
+        ShootTripleShot();
     }
 
-
-    void ShootBullet( float speed)
+    private void ShootTripleShot()
     {
-        GameObject bullet = Instantiate(Attack1, firePoint.position, firePoint.rotation);
+        // 中央下方向の弾を発射
+        ShootBullet(0);
 
-        Rigidbody2D rb = Attack1.GetComponent<Rigidbody2D>();
+        // 左下方向の弾を発射（-30度）
+        ShootBullet(-30);
 
-        Vector3 direction = (player.position - firePoint.position).normalized; // プレイヤーの方向を計算
-        rb.velocity = direction * speed; // 指定された速度で発射
-
+        // 右下方向の弾を発射（30度）
+        ShootBullet(30);
     }
+
+    private void ShootBullet(float angleOffset)
+    {
+        // 下方向を基準にして角度を設定
+        Vector2 direction = Quaternion.Euler(0, 0, angleOffset) * Vector2.down;
+
+        // 弾を生成して速度を設定
+        GameObject bullet = Instantiate(Attack1, transform.position, Quaternion.identity);
+        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        rb.velocity = direction * Attack1bulletSpeed;
+    }
+
+
 
     //中攻撃
     void AttackType2()
